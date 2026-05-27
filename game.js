@@ -81,9 +81,9 @@ function getRarity() {
 /* ESCOLHER TIPO DE PEIXE */
 function chooseFishType() {
     const r = Math.random();
-    if (r < 0.5) currentFishType = fishSprites[0];      // Robalo
-    else if (r < 0.8) currentFishType = fishSprites[1]; // Truta
-    else currentFishType = fishSprites[2];              // Carpa
+    if (r < 0.5) currentFishType = fishSprites[0];
+    else if (r < 0.8) currentFishType = fishSprites[1];
+    else currentFishType = fishSprites[2];
 
     fish.speed = currentFishType.baseSpeed * (Math.random() < 0.5 ? 1 : -1);
 }
@@ -188,7 +188,8 @@ canvas.addEventListener("click", (e) => {
 /* MENU: JOGAR */
 btnPlay.addEventListener("click", () => {
     gameRunning = true;
-    canvas.style.display = "block";
+    canvas.style.display = "block";        // MOSTRA O JOGO
+    inventoryModal.classList.add("hidden"); // FECHA INVENTÁRIO
 });
 
 /* MENU: INVENTÁRIO */
