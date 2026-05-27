@@ -1,22 +1,58 @@
+/* ============================
+   ESTILO GLOBAL
+============================ */
 body {
     margin: 0;
-    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center fixed;
+    padding: 0;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+        no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     text-align: center;
+    color: white;
 }
 
+/* ============================
+   TÍTULO E TEXTO
+============================ */
 h1 {
     margin-top: 20px;
-    color: white;
+    font-size: 36px;
     text-shadow: 0 0 10px black;
 }
 
+p {
+    font-size: 18px;
+    text-shadow: 0 0 8px black;
+}
+
+/* ============================
+   CANVAS DO JOGO
+============================ */
 canvas {
     display: block;
     margin: 20px auto;
-    background: rgba(0, 0, 50, 0.4);
-    border: 3px solid #fff;
-    border-radius: 10px;
-    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 50, 0.35); /* efeito de água escura */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    backdrop-filter: blur(4px); /* efeito vidro */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+    canvas {
+        width: 95%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
