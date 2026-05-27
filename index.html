@@ -11,7 +11,20 @@
     <h1>🎣 Real Fishing Web</h1>
     <p>Clica na água para lançar a linha!</p>
 
+    <div id="menu">
+        <button id="btnPlay">▶ Jogar</button>
+        <button id="btnInventory">📜 Inventário</button>
+    </div>
+
     <canvas id="gameCanvas"></canvas>
+
+    <div id="inventoryModal" class="hidden">
+        <div id="inventoryContent">
+            <h2>📜 Inventário de Peixes</h2>
+            <ul id="inventoryList"></ul>
+            <button id="btnCloseInventory">Fechar</button>
+        </div>
+    </div>
 
     <script src="game.js"></script>
 </body>
