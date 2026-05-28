@@ -188,19 +188,24 @@ canvas.addEventListener("click", (e) => {
 /* MENU: JOGAR */
 btnPlay.addEventListener("click", () => {
     gameRunning = true;
-    canvas.style.display = "block";        // MOSTRA O JOGO
-    inventoryModal.classList.add("hidden"); // FECHA INVENTÁRIO
+    canvas.style.display = "block";
+
+    // FECHAR INVENTÁRIO
+    inventoryModal.classList.add("hidden");
+    inventoryModal.classList.remove("show");
 });
 
 /* MENU: INVENTÁRIO */
 btnInventory.addEventListener("click", () => {
     updateInventoryUI();
+    inventoryModal.classList.add("show");
     inventoryModal.classList.remove("hidden");
 });
 
 /* FECHAR INVENTÁRIO */
 btnCloseInventory.addEventListener("click", () => {
     inventoryModal.classList.add("hidden");
+    inventoryModal.classList.remove("show");
 });
 
 /* ATUALIZAR INVENTÁRIO VISUAL */
